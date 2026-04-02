@@ -20,6 +20,7 @@ import {
 import { SectionWrapper } from "@/components/SectionWrapper";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
+import { LeadForm } from "@/components/LeadForm";
 
 /* ============================================================
    JSON-LD Structured Data
@@ -31,7 +32,7 @@ const organizationJsonLd = {
   name: "Flagship Digital",
   url: "https://flagshipdigital.com",
   description:
-    "Professional website builder built exclusively for marine service providers.",
+    "Professional digital platform built exclusively for marine service providers.",
   sameAs: [],
 };
 
@@ -42,14 +43,18 @@ const softwareJsonLd = {
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   offers: {
-    "@type": "AggregateOffer",
-    lowPrice: "29",
-    highPrice: "119",
+    "@type": "Offer",
+    price: "29",
     priceCurrency: "USD",
-    offerCount: "3",
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      price: "29",
+      priceCurrency: "USD",
+      billingDuration: "P1M",
+    },
   },
   description:
-    "Professional website builder for marine businesses. Includes custom domain, SEO, payment processing, and accounting integrations.",
+    "Professional digital platform for marine businesses. Includes custom domain, SEO, payment processing, and accounting integrations.",
 };
 
 const faqJsonLd = {
@@ -77,7 +82,7 @@ const faqJsonLd = {
       name: "How long does it take to get my site?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your initial site design is typically ready within 48 hours. After you review and approve, we launch it live for you.",
+        text: "Your initial site design is typically ready within 24 hours. After you review and approve, we launch it live for you.",
       },
     },
     {
@@ -93,7 +98,7 @@ const faqJsonLd = {
       name: "Can my customers pay me through my site?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Every plan includes integrated payment processing so your customers can pay deposits, invoices, or book services directly on your site.",
+        text: "Absolutely. Integrated payment processing is included with your site so customers can pay deposits, invoices, or book services directly.",
       },
     },
     {
@@ -101,7 +106,7 @@ const faqJsonLd = {
       name: "Does it work with my accounting software?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We integrate with QuickBooks, Wave, Xero, and other popular accounting platforms so payments flow directly into your books.",
+        text: "We work with popular accounting platforms like QuickBooks, Wave, and Xero to help keep your books in sync.",
       },
     },
   ],
@@ -132,9 +137,9 @@ const features = [
   },
   {
     icon: Calculator,
-    title: "Accounting Integrations",
+    title: "Accounting Compatible",
     description:
-      "Connects with QuickBooks, Wave, Xero, and more. Payments flow directly into your books without double entry.",
+      "Designed to work with popular accounting platforms like QuickBooks, Wave, and Xero.",
   },
   {
     icon: FileText,
@@ -155,12 +160,6 @@ const features = [
       "Built to WCAG accessibility standards from the ground up. Serve every customer, avoid legal exposure.",
   },
   {
-    icon: BookOpen,
-    title: "Built-In Blog",
-    description:
-      "Publish updates, seasonal tips, and service guides. Fresh content builds authority and drives organic traffic.",
-  },
-  {
     icon: Zap,
     title: "Done-For-You, Expert-Built",
     description:
@@ -168,58 +167,22 @@ const features = [
   },
 ];
 
-const pricingTiers = [
-  {
-    name: "Starter",
-    price: "29",
-    description: "Everything you need to get online and start getting found.",
-    features: [
-      "Professional 5-page website",
-      "Custom domain included",
-      "Mobile-responsive design",
-      "Basic SEO setup",
-      "Contact form",
-      "SSL certificate",
-      "Monthly performance report",
-    ],
-    cta: "Get Started",
-    popular: false,
-  },
-  {
-    name: "Professional",
-    price: "69",
-    description: "For businesses ready to grow. Payments, SEO, and more.",
-    features: [
-      "Everything in Starter",
-      "Payment processing",
-      "Quote request forms",
-      "Advanced SEO & JSON-LD",
-      "Blog with CMS",
-      "QuickBooks / Wave integration",
-      "Google Business Profile sync",
-      "Priority support",
-    ],
-    cta: "Get Started",
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    price: "119",
-    description: "Full-service digital presence for established operations.",
-    features: [
-      "Everything in Professional",
-      "Unlimited pages",
-      "Multi-location support",
-      "Advanced accounting integrations",
-      "Custom booking system",
-      "Photo gallery with lightbox",
-      "Dedicated account manager",
-      "Monthly strategy call",
-    ],
-    cta: "Get Started",
-    popular: false,
-  },
-];
+const pricingPlan = {
+  name: "Flagship",
+  price: "29",
+  description: "Everything your marine business needs to get found, get paid, and grow — all in one plan.",
+  features: [
+    "Professional, custom-built website",
+    "Custom domain included",
+    "Mobile-responsive design",
+    "SEO setup & structured data",
+    "Payment processing",
+    "Lead generation forms",
+    "Accounting software compatible",
+    "SSL certificate",
+  ],
+  cta: "Get Your Site Built",
+};
 
 const faqs = [
   {
@@ -235,7 +198,7 @@ const faqs = [
   {
     question: "How long does it take to get my site?",
     answer:
-      "Your initial site design is typically ready within 48 hours. After you review and approve, we launch it live for you. Most customers are up and running within a few days.",
+      "Your initial site design is typically ready within 24 hours. After you review and approve, we launch it live for you. Most customers are up and running within a few days.",
   },
   {
     question: "What if I don't like the site?",
@@ -245,12 +208,12 @@ const faqs = [
   {
     question: "Can my customers pay me through my site?",
     answer:
-      "Absolutely. Every Professional and Enterprise plan includes integrated payment processing. Your customers can pay deposits, invoices, or book services directly through your website.",
+      "Absolutely. Integrated payment processing is included with your site. Your customers can pay deposits, invoices, or book services directly through your website.",
   },
   {
     question: "Does it connect to my accounting software?",
     answer:
-      "Yes. We integrate with QuickBooks, Wave, Xero, and other popular accounting platforms. Payments made through your site flow directly into your books — no double entry.",
+      "We work with popular accounting platforms like QuickBooks, Wave, and Xero to help keep your books in sync with payments coming through your site.",
   },
   {
     question: "Can I cancel anytime?",
@@ -265,9 +228,9 @@ const faqs = [
 ];
 
 const stats = [
-  { value: "70%", label: "of marine businesses have no website or an outdated one" },
-  { value: "97%", label: "of customers search online before choosing a service provider" },
-  { value: "48hrs", label: "from sign-up to a live, professional website" },
+  { value: "86%", label: "of marine buyers shop digitally during their purchase journey" },
+  { value: "1 in 3", label: "customers won't consider a business they can't find online" },
+  { value: "24hrs", label: "from sign-up to a live, professional website" },
   { value: "$0", label: "setup fee on every plan" },
 ];
 
@@ -295,6 +258,7 @@ export default function Home() {
       {/* ── SECTION 1: HERO ── */}
       <section
         aria-label="Hero"
+        className="section-hero"
         style={{
           position: "relative",
           minHeight: "100vh",
@@ -348,7 +312,7 @@ export default function Home() {
           <div style={{ maxWidth: "48rem" }}>
             <FadeIn delay={0.1}>
               <p className="eyebrow" style={{ marginBottom: "1.25rem" }}>
-                Websites for the Marine Industry
+                The Digital Platform for Marine Businesses
               </p>
             </FadeIn>
 
@@ -372,15 +336,15 @@ export default function Home() {
               <p
                 style={{
                   fontSize: "var(--text-body-lg)",
-                  color: "var(--color-chrome)",
+                  color: "var(--color-cream)",
                   lineHeight: 1.75,
                   marginBottom: "2.5rem",
                   maxWidth: "38rem",
                 }}
               >
-                Professional websites built exclusively for marine businesses.
-                Custom domain, real SEO, payment processing, and accounting
-                integrations — all included. We handle everything.
+                Your complete digital presence — professional website, payment
+                processing, booking, accounting integrations, and real SEO —
+                built exclusively for the marine industry. We handle everything.
               </p>
             </FadeIn>
 
@@ -427,8 +391,7 @@ export default function Home() {
                 background: "var(--color-hull)",
                 border: "1px solid var(--color-border-light)",
                 borderRadius: "var(--radius-xl)",
-                aspectRatio: "16/10",
-                display: "flex",
+                aspectRatio: "3/2",
                 flexDirection: "column",
                 overflow: "hidden",
                 boxShadow: "var(--shadow-lg)",
@@ -469,43 +432,190 @@ export default function Home() {
                       color: "var(--color-fog)",
                     }}
                   >
-                    yourbusiness.com
+                    pacificmarinedetailing.com
                   </span>
                 </div>
               </div>
-              {/* Content area */}
-              <div
-                style={{
-                  flex: 1,
+              {/* Mockup website — premium marine detailing, real photos */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", overflow: "hidden", backgroundColor: "#FFFFFF" }}>
+                {/* Nav */}
+                <div style={{
+                  padding: "0.4rem 0.75rem",
                   display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
                   alignItems: "center",
-                  gap: "1rem",
-                  padding: "2rem",
-                }}
-              >
-                <Anchor size={32} style={{ color: "var(--color-brass)", opacity: 0.6 }} />
-                <p
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "var(--text-h3)",
-                    fontWeight: 600,
-                    color: "var(--color-white)",
-                    textAlign: "center",
-                  }}
-                >
-                  Your Website Preview
-                </p>
-                <p
-                  style={{
-                    fontSize: "var(--text-sm)",
-                    color: "var(--color-fog)",
-                    textAlign: "center",
-                  }}
-                >
-                  Custom-built. Professional. Done for you.
-                </p>
+                  justifyContent: "space-between",
+                  backgroundColor: "#FFFFFF",
+                  borderBottom: "1px solid #EEF1F4",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
+                    {/* SVG wave logo */}
+                    <svg width="14" height="14" viewBox="0 0 32 32" fill="none">
+                      <rect width="32" height="32" rx="6" fill="#0D7C6B" />
+                      <path d="M6 18c3-3 5-1 8-1s5-2 8-2 4 1.5 4 1.5" stroke="#FFF" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+                      <path d="M6 22c3-3 5-1 8-1s5-2 8-2 4 1.5 4 1.5" stroke="rgba(255,255,255,0.4)" strokeWidth="1.8" strokeLinecap="round" fill="none" />
+                      <path d="M13 8l3 5.5L19 8" stroke="#FFF" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                      <line x1="16" y1="13" x2="16" y2="17" stroke="#FFF" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: "0.55rem", fontWeight: 700, color: "#1B2D3E" }}>
+                      Pacific Marine
+                    </span>
+                  </div>
+                  <div style={{ display: "flex", gap: "0.6rem", alignItems: "center" }}>
+                    {["Services", "Gallery", "Reviews"].map((item) => (
+                      <span key={item} style={{ fontFamily: "var(--font-body)", fontSize: "0.38rem", color: "#7A8B99", fontWeight: 500 }}>{item}</span>
+                    ))}
+                    <span style={{
+                      fontFamily: "var(--font-body)", fontSize: "0.35rem", fontWeight: 600, color: "#FFF",
+                      background: "linear-gradient(135deg, #E8734A, #D4592E)", padding: "0.15rem 0.45rem", borderRadius: "3px",
+                    }}>Book Now</span>
+                  </div>
+                </div>
+
+                {/* Hero — real photo background */}
+                <div style={{
+                  position: "relative",
+                  overflow: "hidden",
+                  flex: 1,
+                }}>
+                  {/* Background image */}
+                  <img
+                    src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=80&auto=format&fit=crop"
+                    alt=""
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "right center",
+                    }}
+                  />
+                  {/* Dark overlay — heavier on left for text, fades to show boat on right */}
+                  <div style={{
+                    position: "absolute", inset: 0,
+                    background: "linear-gradient(to right, rgba(12,25,42,0.85) 0%, rgba(12,25,42,0.6) 40%, rgba(12,25,42,0.15) 75%, transparent 100%)",
+                  }} />
+                  {/* Bottom fade */}
+                  <div style={{
+                    position: "absolute", bottom: 0, left: 0, right: 0, height: "30%",
+                    background: "linear-gradient(180deg, transparent, rgba(12,25,42,0.5))",
+                  }} />
+
+                  {/* Text overlay */}
+                  <div style={{ position: "relative", zIndex: 1, padding: "1.2rem 0.75rem 0.6rem" }}>
+                    <p style={{
+                      fontFamily: "var(--font-body)", fontSize: "0.32rem", fontWeight: 600,
+                      letterSpacing: "0.12em", textTransform: "uppercase", color: "#4AACA6",
+                      marginBottom: "0.3rem",
+                    }}>Puget Sound&apos;s Trusted Detailers</p>
+                    <p style={{
+                      fontFamily: "var(--font-display)", fontSize: "clamp(0.65rem, 1.6vw, 0.85rem)",
+                      fontWeight: 800, color: "#FFFFFF", lineHeight: 1.15, marginBottom: "0.25rem", maxWidth: "65%",
+                      textShadow: "0 1px 8px rgba(0,0,0,0.3)",
+                    }}>Show-ready finish. Every&nbsp;time.</p>
+                    <p style={{
+                      fontFamily: "var(--font-body)", fontSize: "0.32rem", color: "rgba(255,255,255,0.8)",
+                      lineHeight: 1.5, marginBottom: "0.45rem", maxWidth: "55%",
+                    }}>Premium detailing, ceramic coatings &amp; yacht maintenance from a team that lives on the water.</p>
+                    <div style={{ display: "flex", gap: "0.3rem", alignItems: "center" }}>
+                      <span style={{
+                        fontFamily: "var(--font-body)", fontSize: "0.35rem", fontWeight: 600, color: "#FFF",
+                        background: "linear-gradient(135deg, #E8734A, #D4592E)", padding: "0.2rem 0.55rem", borderRadius: "3px",
+                        boxShadow: "0 2px 8px rgba(212,89,46,0.4)",
+                      }}>Get a Free Quote</span>
+                      <span style={{
+                        fontFamily: "var(--font-body)", fontSize: "0.35rem", fontWeight: 500, color: "#FFF",
+                        padding: "0.2rem 0.55rem", borderRadius: "3px",
+                        border: "1px solid rgba(255,255,255,0.35)", backgroundColor: "rgba(255,255,255,0.1)",
+                        backdropFilter: "blur(4px)",
+                      }}>Our Work</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Trust bar */}
+                <div style={{
+                  padding: "0.3rem 0.75rem",
+                  backgroundColor: "#F8FAFB",
+                  borderTop: "1px solid #EEF1F4",
+                  borderBottom: "1px solid #EEF1F4",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "0.8rem",
+                }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.15rem" }}>
+                    <div style={{ display: "flex", gap: "1px" }}>
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={5} fill="#F4A940" style={{ color: "#F4A940" }} />
+                      ))}
+                    </div>
+                    <span style={{ fontFamily: "var(--font-body)", fontSize: "0.3rem", color: "#4A5968", fontWeight: 600 }}>4.9</span>
+                    <span style={{ fontFamily: "var(--font-body)", fontSize: "0.25rem", color: "#8A97A4" }}>(127)</span>
+                  </div>
+                  <div style={{ width: "1px", height: "0.5rem", backgroundColor: "#DDE3E8" }} />
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.28rem", color: "#8A97A4" }}>Licensed &amp; Insured</span>
+                  <div style={{ width: "1px", height: "0.5rem", backgroundColor: "#DDE3E8" }} />
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: "0.28rem", color: "#8A97A4" }}>Est. 2018</span>
+                </div>
+
+                {/* Service cards with real images */}
+                <div style={{
+                  padding: "0.45rem 0.6rem",
+                  backgroundColor: "#FFFFFF",
+                  display: "flex",
+                  gap: "0.35rem",
+                }}>
+                  {[
+                    {
+                      name: "Full Detail",
+                      price: "$399+",
+                      img: "https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=400&q=80&auto=format",
+                      pos: "center 60%",
+                    },
+                    {
+                      name: "Ceramic Coating",
+                      price: "$899+",
+                      img: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=400&q=80&auto=format",
+                      pos: "center 50%",
+                    },
+                    {
+                      name: "Wash & Wax",
+                      price: "$149+",
+                      img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&q=80&auto=format",
+                      pos: "center 70%",
+                    },
+                  ].map((svc) => (
+                    <div key={svc.name} style={{
+                      flex: 1, borderRadius: "4px", overflow: "hidden",
+                      border: "1px solid #EEF1F4",
+                      boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
+                    }}>
+                      <div style={{ position: "relative", width: "100%", height: "2.2rem", overflow: "hidden" }}>
+                        <img
+                          src={svc.img}
+                          alt=""
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            objectPosition: svc.pos,
+                          }}
+                        />
+                        <span style={{
+                          position: "absolute", top: "0.2rem", right: "0.2rem",
+                          fontFamily: "var(--font-mono)", fontSize: "0.3rem", fontWeight: 600,
+                          color: "#FFF", backgroundColor: "rgba(0,0,0,0.5)", backdropFilter: "blur(4px)",
+                          padding: "0.1rem 0.25rem", borderRadius: "2px",
+                        }}>{svc.price}</span>
+                      </div>
+                      <div style={{ padding: "0.25rem 0.3rem" }}>
+                        <p style={{ fontFamily: "var(--font-display)", fontSize: "0.35rem", fontWeight: 700, color: "#1B2D3E" }}>{svc.name}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </FadeIn>
@@ -513,17 +623,16 @@ export default function Home() {
 
         {/* Responsive hero grid */}
         <style>{`
+          .hero-mockup {
+            display: none !important;
+          }
           @media (min-width: 1024px) {
             .hero-grid {
               grid-template-columns: 1fr 1fr !important;
             }
-          }
-          .hero-mockup {
-            max-width: 560px;
-            margin: 0 auto;
-          }
-          @media (min-width: 1024px) {
             .hero-mockup {
+              display: flex !important;
+              flex-direction: column;
               max-width: none;
             }
           }
@@ -564,19 +673,29 @@ export default function Home() {
               <p
                 style={{
                   fontSize: "var(--text-body-lg)",
-                  color: "var(--color-chrome)",
+                  color: "var(--color-cream)",
                   lineHeight: 1.75,
                   marginBottom: "1.5rem",
                 }}
               >
-                70% of marine service providers either have no website or one
-                that hasn't been updated in years. Meanwhile, 97% of your
-                potential customers check online before they call anyone.
+                86% of marine buyers start their search online. If they can't
+                find you, they're finding your competitor. Yet most marine
+                service providers either have no website or one that hasn't
+                been touched in years.
+              </p>
+              <p
+                style={{
+                  fontSize: "var(--text-xs)",
+                  color: "var(--color-slate)",
+                  marginBottom: "1.5rem",
+                }}
+              >
+                Source: Boatline / MRAA Digital Marketing Report
               </p>
               <p
                 style={{
                   fontSize: "var(--text-body-lg)",
-                  color: "var(--color-chrome)",
+                  color: "var(--color-cream)",
                   lineHeight: 1.75,
                 }}
               >
@@ -655,8 +774,8 @@ export default function Home() {
                 lineHeight: 1.1,
               }}
             >
-              A professional website for the price of a{" "}
-              <span style={{ color: "var(--color-brass)" }}>single bottom paint job.</span>
+              A complete digital platform for the price of{" "}
+              <span style={{ color: "var(--color-brass)" }}>an oil filter.</span>
             </h2>
           </FadeIn>
 
@@ -664,17 +783,17 @@ export default function Home() {
             <p
               style={{
                 fontSize: "var(--text-body-lg)",
-                color: "var(--color-chrome)",
+                color: "var(--color-cream)",
                 lineHeight: 1.75,
                 marginBottom: "1.5rem",
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
             >
-              Flagship Digital builds complete, professional websites exclusively
-              for the marine industry. Real SEO. Payment processing. Accounting
-              integrations. Your own domain. Not a template — a website built
-              from your actual business, ready to convert customers the day it
+              Flagship Digital builds a complete professional platform exclusively
+              for the marine industry. Real SEO. Payment processing. Lead generation
+              forms. Compatible with your accounting software. Your own domain — built around
+              your actual business, ready to convert customers the day it
               launches.
             </p>
           </FadeIn>
@@ -850,7 +969,7 @@ export default function Home() {
               icon: TrendingUp,
               title: "We Launch It",
               description:
-                "Your custom domain goes live. SEO is active. Payment processing is configured. Accounting is connected. Customers can find you and pay you, starting today.",
+                "Your custom domain goes live. SEO is active. Payment processing is configured. Your accounting tools are integrated. Customers can find you and pay you, starting today.",
             },
           ].map((item, i) => (
             <FadeIn key={item.step} delay={i * 0.15}>
@@ -869,7 +988,7 @@ export default function Home() {
                     fontFamily: "var(--font-mono)",
                     fontSize: "var(--text-display)",
                     fontWeight: 500,
-                    color: "rgba(200,160,78,0.08)",
+                    color: "rgba(200,160,78,0.2)",
                     position: "absolute",
                     top: "-0.25rem",
                     right: "1.25rem",
@@ -955,145 +1074,113 @@ export default function Home() {
           </FadeIn>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1.5rem",
-            alignItems: "stretch",
-          }}
-        >
-          {pricingTiers.map((tier, i) => (
-            <FadeIn key={tier.name} delay={i * 0.12}>
-              <div
+        <FadeIn>
+          <div
+            style={{
+              maxWidth: "32rem",
+              margin: "0 auto",
+              padding: "3rem 2.5rem",
+              borderRadius: "var(--radius-lg)",
+              border: "2px solid var(--color-brass)",
+              backgroundColor: "var(--color-midnight)",
+              boxShadow: "var(--shadow-card), var(--shadow-glow)",
+              textAlign: "center",
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "center",
+                gap: "0.25rem",
+                marginBottom: "0.75rem",
+              }}
+            >
+              <span
                 style={{
-                  position: "relative",
-                  padding: "2.5rem 2rem",
-                  borderRadius: "var(--radius-lg)",
-                  border: tier.popular
-                    ? "2px solid var(--color-brass)"
-                    : "1px solid var(--color-border-light)",
-                  backgroundColor: "var(--color-midnight)",
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  boxShadow: tier.popular
-                    ? "var(--shadow-card), var(--shadow-glow)"
-                    : "var(--shadow-card)",
+                  fontFamily: "var(--font-mono)",
+                  fontSize: "var(--text-hero)",
+                  fontWeight: 500,
+                  color: "var(--color-white)",
                 }}
               >
-                {tier.popular && (
-                  <span
-                    className="badge-popular"
-                    style={{
-                      position: "absolute",
-                      top: "-0.75rem",
-                      left: "50%",
-                      transform: "translateX(-50%)",
-                    }}
-                  >
-                    Most Popular
-                  </span>
-                )}
+                ${pricingPlan.price}
+              </span>
+              <span
+                style={{
+                  fontSize: "var(--text-sm)",
+                  color: "var(--color-fog)",
+                }}
+              >
+                /mo
+              </span>
+            </div>
 
-                <h3
-                  style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: "var(--text-h3)",
-                    fontWeight: 600,
-                    color: "var(--color-white)",
-                    marginBottom: "0.5rem",
-                  }}
-                >
-                  {tier.name}
-                </h3>
+            <p
+              style={{
+                fontSize: "var(--text-body)",
+                color: "var(--color-fog)",
+                lineHeight: 1.65,
+                marginBottom: "2rem",
+                maxWidth: "28rem",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              {pricingPlan.description}
+            </p>
 
-                <div
+            <ul
+              style={{
+                listStyle: "none",
+                padding: 0,
+                margin: "0 0 2rem 0",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "0.75rem",
+                textAlign: "left",
+              }}
+            >
+              {pricingPlan.features.map((feature) => (
+                <li
+                  key={feature}
                   style={{
                     display: "flex",
-                    alignItems: "baseline",
-                    gap: "0.25rem",
-                    marginBottom: "0.75rem",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "var(--font-mono)",
-                      fontSize: "var(--text-hero)",
-                      fontWeight: 500,
-                      color: "var(--color-white)",
-                    }}
-                  >
-                    ${tier.price}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: "var(--text-sm)",
-                      color: "var(--color-fog)",
-                    }}
-                  >
-                    /mo
-                  </span>
-                </div>
-
-                <p
-                  style={{
+                    alignItems: "flex-start",
+                    gap: "0.5rem",
                     fontSize: "var(--text-sm)",
-                    color: "var(--color-fog)",
-                    lineHeight: 1.65,
-                    marginBottom: "1.5rem",
+                    color: "var(--color-cream)",
                   }}
                 >
-                  {tier.description}
-                </p>
+                  <Check
+                    size={16}
+                    style={{
+                      color: "var(--color-brass)",
+                      flexShrink: 0,
+                      marginTop: "2px",
+                    }}
+                    aria-hidden="true"
+                  />
+                  {feature}
+                </li>
+              ))}
+            </ul>
 
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: "0 0 2rem 0",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.75rem",
-                    flex: 1,
-                  }}
-                >
-                  {tier.features.map((feature) => (
-                    <li
-                      key={feature}
-                      style={{
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: "0.5rem",
-                        fontSize: "var(--text-sm)",
-                        color: "var(--color-chrome)",
-                      }}
-                    >
-                      <Check
-                        size={16}
-                        style={{
-                          color: "var(--color-brass)",
-                          flexShrink: 0,
-                          marginTop: "2px",
-                        }}
-                        aria-hidden="true"
-                      />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+            <Button href="#cta" size="lg">
+              {pricingPlan.cta} <ArrowRight size={18} />
+            </Button>
 
-                <Button
-                  href="#cta"
-                  variant={tier.popular ? "primary" : "secondary"}
-                  size="lg"
-                >
-                  {tier.cta}
-                </Button>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+            <p
+              style={{
+                marginTop: "1rem",
+                fontSize: "var(--text-xs)",
+                color: "var(--color-slate)",
+              }}
+            >
+              No setup fee · No contracts · Cancel anytime
+            </p>
+          </div>
+        </FadeIn>
       </SectionWrapper>
 
       {/* ── SECTION 7: SOCIAL PROOF ── */}
@@ -1174,7 +1261,7 @@ export default function Home() {
                 <p
                   style={{
                     fontSize: "var(--text-body)",
-                    color: "var(--color-chrome)",
+                    color: "var(--color-cream)",
                     lineHeight: 1.75,
                     fontStyle: "italic",
                     flex: 1,
@@ -1481,6 +1568,7 @@ export default function Home() {
       <section
         id="cta"
         aria-label="Get started"
+        className="section-cta"
         style={{
           position: "relative",
           padding: "var(--section-pad-y) var(--section-pad-x)",
@@ -1534,7 +1622,7 @@ export default function Home() {
             <p
               style={{
                 fontSize: "var(--text-body-lg)",
-                color: "var(--color-chrome)",
+                color: "var(--color-cream)",
                 lineHeight: 1.75,
                 marginBottom: "2.5rem",
                 marginLeft: "auto",
@@ -1542,29 +1630,18 @@ export default function Home() {
                 maxWidth: "36rem",
               }}
             >
-              Get a professional website that works as hard as you do. Custom
-              domain, SEO, payments, accounting — all included from day one.
+              Tell us about your business and we&apos;ll get started. No commitment,
+              no credit card required.
             </p>
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: "1rem",
-                flexWrap: "wrap",
-                marginBottom: "1.5rem",
-              }}
-            >
-              <Button href="#pricing" size="lg">
-                Get Your Site Built <ArrowRight size={18} />
-              </Button>
-            </div>
+            <LeadForm />
             <p
               style={{
                 fontSize: "var(--text-sm)",
                 color: "var(--color-fog)",
+                marginTop: "1.5rem",
               }}
             >
               Starting at{" "}
