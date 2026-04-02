@@ -64,7 +64,7 @@ export function Nav() {
       >
         {/* Logo */}
         <a
-          href="#main-content"
+          href="/"
           style={{
             textDecoration: "none",
             display: "flex",

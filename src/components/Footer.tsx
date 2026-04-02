@@ -41,7 +41,7 @@ export function Footer() {
         >
           {/* Logo */}
           <a
-            href="#main-content"
+            href="/"
             style={{
               textDecoration: "none",
               display: "flex",
