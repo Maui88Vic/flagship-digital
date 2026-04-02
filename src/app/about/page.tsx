@@ -283,7 +283,7 @@ export default function AboutPage() {
             >
               Your marine business deserves a professional digital presence. We&apos;ll have your site live in 24 hours.
             </p>
-            <Button href="/#pricing" variant="primary" size="lg">
+            <Button href="/#cta" variant="primary" size="lg">
               Get Your Site Built
             </Button>
           </FadeIn>
