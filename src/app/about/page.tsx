@@ -237,7 +237,7 @@ export default function AboutPage() {
                 Flagship Digital is a technology company focused on building vertical SaaS platforms for underserved industries.
               </p>
               <p>
-                We&apos;re starting with the marine industry because we know it, we love it, and we believe the people who keep our waterways running deserve better digital tools.
+                We focused on the marine industry because we know it, we love it, and we believe the people who keep our waterways running deserve better digital tools.
               </p>
               <p>
                 Based in the heart of the Pacific Northwest, we serve marine businesses around the world.
