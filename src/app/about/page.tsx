@@ -234,6 +234,9 @@ export default function AboutPage() {
               }}
             >
               <p>
+                We&apos;re technology entrepreneurs and lifelong boaters. We&apos;ve spent decades building software that solves real problems for specialized industries — and we&apos;ve spent just as many years on boats.
+              </p>
+              <p>
                 Flagship Digital is a technology company focused on building vertical SaaS platforms for underserved industries.
               </p>
               <p>
