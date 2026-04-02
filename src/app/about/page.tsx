@@ -94,6 +94,7 @@ export default function AboutPage() {
                 fontWeight: 700,
                 color: "var(--color-heading)",
                 marginBottom: "2rem",
+                textAlign: "center",
               }}
             >
               The Problem We Saw
@@ -218,6 +219,7 @@ export default function AboutPage() {
                 fontWeight: 700,
                 color: "var(--color-heading)",
                 marginBottom: "2rem",
+                textAlign: "center",
               }}
             >
               The Company
