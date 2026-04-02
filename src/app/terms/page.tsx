@@ -75,7 +75,7 @@ export default function TermsPage() {
                 By creating an account or using the Service, you agree to be bound by these Terms. If you are using the Service on behalf of a business or organization, you represent that you have the authority to bind that entity.
               </p>
               <p>
-                You must be at least 18 years of age to use the Service.
+                You must be at least 18 years of age to use the Service. The Service is available to users worldwide, subject to applicable local laws and regulations.
               </p>
             </LegalSection>
 

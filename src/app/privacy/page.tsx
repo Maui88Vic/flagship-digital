@@ -5,7 +5,7 @@ import { FadeIn } from "@/components/FadeIn";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Flagship Digital. How we collect, use, and protect your data across Canada, the United States, and the United Kingdom.",
+    "Privacy Policy for Flagship Digital. How we collect, use, and protect your data worldwide.",
 };
 
 const lastUpdated = "April 2, 2026";
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
                 Flagship Digital (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) provides a digital platform for marine service providers including professional website building, payment processing, lead generation, and related services (the &ldquo;Service&rdquo;).
               </p>
               <p>
-                This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website, use our platform, or interact with us. It applies to users in Canada, the United States, and the United Kingdom.
+                This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website, use our platform, or interact with us. It applies to all users worldwide. Where specific regional laws apply (including PIPEDA in Canada, CCPA in the United States, and UK GDPR in the United Kingdom), we have included additional provisions below.
               </p>
               <p>
                 By using our Service, you agree to the collection and use of information as described in this policy. If you do not agree, please do not use the Service.
@@ -195,7 +195,7 @@ export default function PrivacyPage() {
             {/* 9. International Data Transfers */}
             <LegalSection number="9" title="International Data Transfers">
               <p>
-                Your data may be processed and stored in Canada and the United States. If you are located in the United Kingdom, we ensure appropriate safeguards are in place for cross-border transfers, including Standard Contractual Clauses (SCCs) where required under UK GDPR.
+                Your data may be processed and stored in Canada and the United States, regardless of where you are located. If you are accessing the Service from outside these countries, your information will be transferred to and processed in these jurisdictions. We ensure appropriate safeguards are in place for cross-border transfers, including Standard Contractual Clauses (SCCs) where required under UK GDPR or EU GDPR.
               </p>
               <p>
                 Canada has been recognized by the UK as providing an adequate level of data protection.
