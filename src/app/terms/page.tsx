@@ -69,7 +69,7 @@ export default function TermsPage() {
             {/* 1 */}
             <LegalSection number="1" title="Acceptance of Terms">
               <p>
-                These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the services provided by Flagship Digital, operated by 0Billions Inc. (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), including our platform, websites we build on your behalf, and all related services (collectively, the &ldquo;Service&rdquo;).
+                These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the services provided by Flagship Digital (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), including our platform, websites we build on your behalf, and all related services (collectively, the &ldquo;Service&rdquo;).
               </p>
               <p>
                 By creating an account or using the Service, you agree to be bound by these Terms. If you are using the Service on behalf of a business or organization, you represent that you have the authority to bind that entity.
@@ -189,7 +189,7 @@ export default function TermsPage() {
 
               <h4 style={subheadingStyle}>7.2 Our Platform</h4>
               <p>
-                The Service, including its code, templates, design systems, branding, and underlying technology, is the intellectual property of 0Billions Inc. These materials are licensed to you for use within the Service and may not be copied, modified, distributed, or used outside the platform.
+                The Service, including its code, templates, design systems, branding, and underlying technology, is the intellectual property of Flagship Digital. These materials are licensed to you for use within the Service and may not be copied, modified, distributed, or used outside the platform.
               </p>
 
               <h4 style={subheadingStyle}>7.3 Generated Websites</h4>
@@ -248,7 +248,7 @@ export default function TermsPage() {
             {/* 12 */}
             <LegalSection number="12" title="Indemnification">
               <p>
-                You agree to indemnify and hold harmless 0Billions Inc., its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of:
+                You agree to indemnify and hold harmless Flagship Digital, its officers, directors, employees, and agents from and against any claims, damages, losses, liabilities, and expenses (including reasonable legal fees) arising out of:
               </p>
               <ul style={listStyle}>
                 <li>Your use of the Service or violation of these Terms.</li>
@@ -305,7 +305,7 @@ export default function TermsPage() {
             <LegalSection number="17" title="Contact Us">
               <p>If you have questions about these Terms, contact us at:</p>
               <p>
-                <strong>Flagship Digital</strong> — a product of 0Billions Inc.<br />
+                <strong>Flagship Digital</strong><br />
                 Email: <a href="mailto:legal@flagshipdigital.com" style={linkStyle}>legal@flagshipdigital.com</a>
               </p>
             </LegalSection>

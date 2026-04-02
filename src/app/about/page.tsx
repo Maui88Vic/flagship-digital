@@ -234,7 +234,7 @@ export default function AboutPage() {
               }}
             >
               <p>
-                Flagship Digital is a product of <strong>0Billions Inc.</strong>, a technology company focused on building vertical SaaS platforms for underserved industries.
+                Flagship Digital is a technology company focused on building vertical SaaS platforms for underserved industries.
               </p>
               <p>
                 We&apos;re starting with the marine industry because we know it, we love it, and we believe the people who keep our waterways running deserve better digital tools.

@@ -69,7 +69,7 @@ export default function PrivacyPage() {
             {/* 1. Introduction */}
             <LegalSection number="1" title="Introduction">
               <p>
-                Flagship Digital (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), operated by 0Billions Inc., provides a digital platform for marine service providers including professional website building, payment processing, lead generation, and related services (the &ldquo;Service&rdquo;).
+                Flagship Digital (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) provides a digital platform for marine service providers including professional website building, payment processing, lead generation, and related services (the &ldquo;Service&rdquo;).
               </p>
               <p>
                 This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you visit our website, use our platform, or interact with us. It applies to users in Canada, the United States, and the United Kingdom.
@@ -264,7 +264,7 @@ export default function PrivacyPage() {
             <LegalSection number="13" title="Contact Us">
               <p>If you have questions about this Privacy Policy or wish to exercise your privacy rights, contact us at:</p>
               <p>
-                <strong>Flagship Digital</strong> — a product of 0Billions Inc.<br />
+                <strong>Flagship Digital</strong><br />
                 Email: <a href="mailto:privacy@flagshipdigital.com" style={linkStyle}>privacy@flagshipdigital.com</a>
               </p>
               <p>
