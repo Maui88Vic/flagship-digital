@@ -27,7 +27,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Flagship Digital — Professional Websites for Marine Businesses",
+    default: "Flagship Digital — The Digital Platform for Marine Businesses",
     template: "%s | Flagship Digital",
   },
   description:
@@ -46,15 +46,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://flagshipdigital.com",
     siteName: "Flagship Digital",
-    title: "Flagship Digital — Professional Websites for Marine Businesses",
+    title: "Flagship Digital — The Digital Platform for Marine Businesses",
     description:
-      "Professional websites built exclusively for the marine industry. Custom domain, SEO, payments, and accounting integrations. Starting at $29/mo.",
+      "The complete digital platform for marine businesses. Custom domain, SEO, payments, and accounting integrations. Starting at $29/mo.",
     images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flagship Digital — Websites for Marine Businesses",
-    description: "Professional websites built for the marine industry. Starting at $29/mo.",
+    title: "Flagship Digital — The Digital Platform for Marine Businesses",
+    description: "The complete digital platform for marine businesses. Starting at $29/mo.",
   },
   robots: { index: true, follow: true },
 };
