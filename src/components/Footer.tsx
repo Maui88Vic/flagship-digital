@@ -1,5 +1,6 @@
 const footerLinks = [
   { label: "Features", href: "#features" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Privacy Policy", href: "/privacy" },
@@ -62,7 +63,7 @@ export function Footer() {
                 fontFamily: "var(--font-display)",
                 fontWeight: 700,
                 fontSize: "1.125rem",
-                color: "var(--color-signal)",
+                color: "var(--color-brass)",
               }}
             >
               Digital

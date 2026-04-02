@@ -6,6 +6,7 @@ import { Button } from "./Button";
 const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -43,7 +44,7 @@ export function Nav() {
         left: 0,
         right: 0,
         zIndex: 50,
-        backgroundColor: scrolled ? "rgba(10, 14, 26, 0.95)" : "var(--color-midnight)",
+        backgroundColor: scrolled ? "rgba(10, 22, 40, 0.95)" : "var(--color-midnight)",
         borderBottom: "1px solid var(--color-border)",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
@@ -87,7 +88,7 @@ export function Nav() {
               fontFamily: "var(--font-display)",
               fontWeight: 700,
               fontSize: "1.25rem",
-              color: "var(--color-signal)",
+              color: "var(--color-brass)",
             }}
           >
             Digital

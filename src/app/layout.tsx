@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Syne, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Manrope, Inter, JetBrains_Mono } from "next/font/google";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const syne = Syne({
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: "--font-syne",
+  variable: "--font-manrope",
   display: "swap",
   weight: ["500", "600", "700", "800"],
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta-sans",
+  variable: "--font-inter",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${syne.variable} ${plusJakarta.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${manrope.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <body>
         <a href="#main-content" className="skip-link">
           Skip to main content

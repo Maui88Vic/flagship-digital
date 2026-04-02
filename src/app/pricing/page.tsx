@@ -84,7 +84,7 @@ const comparisonRows = [
 function CellValue({ value }: { value: boolean | string }) {
   if (value === true) {
     return (
-      <Check size={16} style={{ color: "var(--color-signal)" }} aria-label="Included" />
+      <Check size={16} style={{ color: "var(--color-brass)" }} aria-label="Included" />
     );
   }
   if (value === false) {
@@ -166,7 +166,7 @@ export default function PricingPage() {
                   padding: "2.5rem 2rem",
                   borderRadius: "var(--radius-lg)",
                   border: tier.popular
-                    ? "2px solid var(--color-signal)"
+                    ? "2px solid var(--color-brass)"
                     : "1px solid var(--color-border-light)",
                   backgroundColor: "var(--color-midnight)",
                   display: "flex",
@@ -261,7 +261,7 @@ export default function PricingPage() {
                     >
                       <Check
                         size={16}
-                        style={{ color: "var(--color-signal)", flexShrink: 0, marginTop: "2px" }}
+                        style={{ color: "var(--color-brass)", flexShrink: 0, marginTop: "2px" }}
                         aria-hidden="true"
                       />
                       {feature}

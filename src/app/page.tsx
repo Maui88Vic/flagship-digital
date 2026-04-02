@@ -49,7 +49,7 @@ const softwareJsonLd = {
     offerCount: "3",
   },
   description:
-    "AI-powered website builder for marine businesses. Includes custom domain, SEO, payment processing, and accounting integrations.",
+    "Professional website builder for marine businesses. Includes custom domain, SEO, payment processing, and accounting integrations.",
 };
 
 const faqJsonLd = {
@@ -77,7 +77,7 @@ const faqJsonLd = {
       name: "How long does it take to get my site?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Your initial site is generated in about 30 seconds. After you review and approve, we can have it live within 24 hours.",
+        text: "Your initial site design is typically ready within 48 hours. After you review and approve, we launch it live for you.",
       },
     },
     {
@@ -162,9 +162,9 @@ const features = [
   },
   {
     icon: Zap,
-    title: "AI-Generated, Expert-Refined",
+    title: "Done-For-You, Expert-Built",
     description:
-      "Your site is generated in seconds using AI trained on what works for marine businesses. Then fine-tuned by real people.",
+      "We build your entire site from scratch, designed specifically for your marine business. Every element is crafted by our team to convert visitors into customers.",
   },
 ];
 
@@ -235,7 +235,7 @@ const faqs = [
   {
     question: "How long does it take to get my site?",
     answer:
-      "Your initial site is generated in about 30 seconds. After you review and approve, we can have it live within 24 hours. Most customers are up and running same-day.",
+      "Your initial site design is typically ready within 48 hours. After you review and approve, we launch it live for you. Most customers are up and running within a few days.",
   },
   {
     question: "What if I don't like the site?",
@@ -267,7 +267,7 @@ const faqs = [
 const stats = [
   { value: "70%", label: "of marine businesses have no website or an outdated one" },
   { value: "97%", label: "of customers search online before choosing a service provider" },
-  { value: "30s", label: "to generate your professional website with AI" },
+  { value: "48hrs", label: "from sign-up to a live, professional website" },
   { value: "$0", label: "setup fee on every plan" },
 ];
 
@@ -326,7 +326,7 @@ export default function Home() {
             height: "50vw",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(0,229,160,0.08) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(200,160,78,0.08) 0%, transparent 70%)",
             filter: "blur(60px)",
           }}
         />
@@ -380,7 +380,7 @@ export default function Home() {
               >
                 Professional websites built exclusively for marine businesses.
                 Custom domain, real SEO, payment processing, and accounting
-                integrations — all included. Live in 24 hours.
+                integrations — all included. We handle everything.
               </p>
             </FadeIn>
 
@@ -407,7 +407,7 @@ export default function Home() {
                 <span
                   style={{
                     fontFamily: "var(--font-mono)",
-                    color: "var(--color-signal)",
+                    color: "var(--color-brass)",
                     fontWeight: 500,
                   }}
                 >
@@ -485,7 +485,7 @@ export default function Home() {
                   padding: "2rem",
                 }}
               >
-                <Anchor size={32} style={{ color: "var(--color-signal)", opacity: 0.6 }} />
+                <Anchor size={32} style={{ color: "var(--color-brass)", opacity: 0.6 }} />
                 <p
                   style={{
                     fontFamily: "var(--font-display)",
@@ -504,7 +504,7 @@ export default function Home() {
                     textAlign: "center",
                   }}
                 >
-                  AI-generated. Professional. Ready in 30 seconds.
+                  Custom-built. Professional. Done for you.
                 </p>
               </div>
             </div>
@@ -557,7 +557,7 @@ export default function Home() {
                 }}
               >
                 Your customers are searching online.{" "}
-                <span style={{ color: "var(--color-signal)" }}>
+                <span style={{ color: "var(--color-brass)" }}>
                   Can they find you?
                 </span>
               </h2>
@@ -609,7 +609,7 @@ export default function Home() {
                       fontFamily: "var(--font-mono)",
                       fontSize: "var(--text-h2)",
                       fontWeight: 500,
-                      color: "var(--color-signal)",
+                      color: "var(--color-brass)",
                       marginBottom: "0.5rem",
                     }}
                   >
@@ -656,7 +656,7 @@ export default function Home() {
               }}
             >
               A professional website for the price of a{" "}
-              <span style={{ color: "var(--color-signal)" }}>single bottom paint job.</span>
+              <span style={{ color: "var(--color-brass)" }}>single bottom paint job.</span>
             </h2>
           </FadeIn>
 
@@ -752,7 +752,7 @@ export default function Home() {
                     width: "3rem",
                     height: "3rem",
                     borderRadius: "var(--radius-md)",
-                    backgroundColor: "rgba(0,229,160,0.1)",
+                    backgroundColor: "rgba(200,160,78,0.1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -761,7 +761,7 @@ export default function Home() {
                 >
                   <feature.icon
                     size={22}
-                    style={{ color: "var(--color-signal)" }}
+                    style={{ color: "var(--color-brass)" }}
                     aria-hidden="true"
                   />
                 </div>
@@ -836,7 +836,7 @@ export default function Home() {
               icon: Zap,
               title: "We Build It",
               description:
-                "Share your business details — name, services, location. Our AI generates a complete, professional website in about 30 seconds, tailored to your marine business.",
+                "Share your business details — name, services, location. Our team designs and builds a complete, professional website tailored to your marine business.",
             },
             {
               step: "02",
@@ -869,7 +869,7 @@ export default function Home() {
                     fontFamily: "var(--font-mono)",
                     fontSize: "var(--text-display)",
                     fontWeight: 500,
-                    color: "rgba(0,229,160,0.08)",
+                    color: "rgba(200,160,78,0.08)",
                     position: "absolute",
                     top: "-0.25rem",
                     right: "1.25rem",
@@ -884,7 +884,7 @@ export default function Home() {
                     width: "3.5rem",
                     height: "3.5rem",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(0,229,160,0.1)",
+                    backgroundColor: "rgba(200,160,78,0.1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -893,7 +893,7 @@ export default function Home() {
                 >
                   <item.icon
                     size={24}
-                    style={{ color: "var(--color-signal)" }}
+                    style={{ color: "var(--color-brass)" }}
                     aria-hidden="true"
                   />
                 </div>
@@ -971,7 +971,7 @@ export default function Home() {
                   padding: "2.5rem 2rem",
                   borderRadius: "var(--radius-lg)",
                   border: tier.popular
-                    ? "2px solid var(--color-signal)"
+                    ? "2px solid var(--color-brass)"
                     : "1px solid var(--color-border-light)",
                   backgroundColor: "var(--color-midnight)",
                   display: "flex",
@@ -1072,7 +1072,7 @@ export default function Home() {
                       <Check
                         size={16}
                         style={{
-                          color: "var(--color-signal)",
+                          color: "var(--color-brass)",
                           flexShrink: 0,
                           marginTop: "2px",
                         }}
@@ -1210,7 +1210,191 @@ export default function Home() {
         </div>
       </SectionWrapper>
 
-      {/* ── SECTION 8: FAQ ── */}
+      {/* ── SECTION 8: PORTFOLIO ── */}
+      <SectionWrapper bg="midnight" overlay="line-grid" id="portfolio" ariaLabel="Our portfolio">
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <FadeIn>
+            <p className="eyebrow" style={{ marginBottom: "1rem" }}>
+              Our Work
+            </p>
+            <h2
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "var(--text-h2)",
+                fontWeight: 700,
+                color: "var(--color-white)",
+                marginBottom: "1rem",
+              }}
+            >
+              Sites we&apos;ve built for marine businesses
+            </h2>
+            <p
+              style={{
+                fontSize: "var(--text-body-lg)",
+                color: "var(--color-fog)",
+                maxWidth: "36rem",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
+            >
+              Every site is custom-designed for the marine industry. Here&apos;s what
+              your business could look like.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "1.5rem",
+          }}
+        >
+          {[
+            {
+              name: "Pacific Marine Detailing",
+              type: "Mobile Marine Detailing",
+              description: "Full-service website with online booking, payment processing, and before/after gallery.",
+            },
+            {
+              name: "Harbour Engine Works",
+              type: "Marine Engine Repair",
+              description: "Service-focused site with quote request forms, vessel-specific intake, and QuickBooks integration.",
+            },
+            {
+              name: "Coastal Charter Co.",
+              type: "Charter & Tours",
+              description: "Booking-driven site with fleet gallery, trip itineraries, and integrated deposit payments.",
+            },
+          ].map((project, i) => (
+            <FadeIn key={i} delay={i * 0.12}>
+              <div
+                className="glass-card"
+                style={{
+                  overflow: "hidden",
+                  display: "flex",
+                  flexDirection: "column",
+                  height: "100%",
+                }}
+              >
+                {/* Mockup preview area */}
+                <div
+                  style={{
+                    background: "linear-gradient(135deg, var(--color-steel) 0%, var(--color-hull) 100%)",
+                    padding: "2rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    minHeight: "200px",
+                    borderBottom: "1px solid var(--color-border)",
+                  }}
+                >
+                  {/* Browser chrome mockup */}
+                  <div
+                    style={{
+                      width: "100%",
+                      maxWidth: "320px",
+                      borderRadius: "var(--radius-md)",
+                      overflow: "hidden",
+                      border: "1px solid var(--color-border-light)",
+                    }}
+                  >
+                    <div
+                      style={{
+                        padding: "0.5rem 0.75rem",
+                        backgroundColor: "rgba(255,255,255,0.05)",
+                        borderBottom: "1px solid var(--color-border)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "6px",
+                      }}
+                    >
+                      <span style={{ width: 7, height: 7, borderRadius: "50%", backgroundColor: "#FF5F57" }} />
+                      <span style={{ width: 7, height: 7, borderRadius: "50%", backgroundColor: "#FFBD2E" }} />
+                      <span style={{ width: 7, height: 7, borderRadius: "50%", backgroundColor: "#28C840" }} />
+                      <span
+                        style={{
+                          flex: 1,
+                          marginLeft: "0.5rem",
+                          fontFamily: "var(--font-mono)",
+                          fontSize: "0.6rem",
+                          color: "var(--color-fog)",
+                        }}
+                      >
+                        {project.name.toLowerCase().replace(/\s+/g, "")}.com
+                      </span>
+                    </div>
+                    <div
+                      style={{
+                        padding: "1.5rem 1rem",
+                        backgroundColor: "rgba(255,255,255,0.02)",
+                        textAlign: "center",
+                      }}
+                    >
+                      <Anchor
+                        size={20}
+                        style={{ color: "var(--color-brass)", marginBottom: "0.5rem", opacity: 0.7 }}
+                        aria-hidden="true"
+                      />
+                      <p
+                        style={{
+                          fontFamily: "var(--font-display)",
+                          fontSize: "var(--text-sm)",
+                          fontWeight: 600,
+                          color: "var(--color-white)",
+                        }}
+                      >
+                        {project.name}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card content */}
+                <div style={{ padding: "1.5rem" }}>
+                  <p
+                    className="eyebrow"
+                    style={{ marginBottom: "0.5rem", fontSize: "var(--text-xs)" }}
+                  >
+                    {project.type}
+                  </p>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: "var(--text-h4)",
+                      fontWeight: 600,
+                      color: "var(--color-white)",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    {project.name}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "var(--text-sm)",
+                      color: "var(--color-fog)",
+                      lineHeight: 1.65,
+                    }}
+                  >
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn delay={0.4}>
+          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+            <Button href="/portfolio" variant="secondary" size="lg">
+              View Full Portfolio <ArrowRight size={18} />
+            </Button>
+          </div>
+        </FadeIn>
+      </SectionWrapper>
+
+      {/* ── SECTION 9: FAQ ── */}
       <SectionWrapper bg="midnight" overlay="dot-grid" id="faq" ariaLabel="Frequently asked questions">
         <div style={{ textAlign: "center", marginBottom: "4rem" }}>
           <FadeIn>
@@ -1317,7 +1501,7 @@ export default function Home() {
             height: "40vw",
             borderRadius: "50%",
             background:
-              "radial-gradient(circle, rgba(0,229,160,0.1) 0%, transparent 70%)",
+              "radial-gradient(circle, rgba(200,160,78,0.1) 0%, transparent 70%)",
             filter: "blur(80px)",
           }}
         />
@@ -1387,7 +1571,7 @@ export default function Home() {
               <span
                 style={{
                   fontFamily: "var(--font-mono)",
-                  color: "var(--color-signal)",
+                  color: "var(--color-brass)",
                   fontWeight: 500,
                 }}
               >

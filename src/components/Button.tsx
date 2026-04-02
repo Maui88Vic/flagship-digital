@@ -26,9 +26,9 @@ const baseStyles: React.CSSProperties = {
 
 const variants: Record<string, React.CSSProperties> = {
   primary: {
-    backgroundColor: "var(--color-signal)",
+    backgroundColor: "var(--color-brass)",
     color: "var(--color-midnight)",
-    border: "2px solid var(--color-signal)",
+    border: "2px solid var(--color-brass)",
   },
   secondary: {
     backgroundColor: "transparent",
@@ -37,7 +37,7 @@ const variants: Record<string, React.CSSProperties> = {
   },
   ghost: {
     backgroundColor: "transparent",
-    color: "var(--color-signal)",
+    color: "var(--color-brass)",
     border: "2px solid transparent",
     padding: "0",
   },
