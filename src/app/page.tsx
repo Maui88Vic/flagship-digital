@@ -304,7 +304,7 @@ export default function Home() {
             padding: "8rem var(--section-pad-x) 6rem",
             display: "grid",
             gridTemplateColumns: "1fr",
-            gap: "4rem",
+            gap: "3rem",
             alignItems: "center",
           }}
           className="hero-grid"
@@ -390,17 +390,20 @@ export default function Home() {
               style={{
                 background: "var(--color-hull)",
                 border: "1px solid var(--color-border-light)",
-                borderRadius: "var(--radius-xl)",
-                aspectRatio: "3/2",
+                borderRadius: "var(--radius-lg)",
+                aspectRatio: "4/3",
+                maxWidth: "480px",
+                width: "100%",
+                marginLeft: "auto",
                 flexDirection: "column",
                 overflow: "hidden",
-                boxShadow: "var(--shadow-lg)",
+                boxShadow: "0 20px 60px rgba(10,22,40,0.5), 0 0 40px rgba(200,160,78,0.08)",
               }}
             >
               {/* Browser chrome */}
               <div
                 style={{
-                  padding: "0.75rem 1rem",
+                  padding: "0.5rem 0.75rem",
                   backgroundColor: "var(--color-steel)",
                   borderBottom: "1px solid var(--color-border)",
                   display: "flex",
@@ -480,7 +483,7 @@ export default function Home() {
                 }}>
                   {/* Background image */}
                   <img
-                    src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&q=80&auto=format&fit=crop"
+                    src="/pexels-dpsinghbhullar-30483267.jpg"
                     alt=""
                     style={{
                       position: "absolute",
@@ -488,7 +491,7 @@ export default function Home() {
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
-                      objectPosition: "right center",
+                      objectPosition: "center 40%",
                     }}
                   />
                   {/* Dark overlay — heavier on left for text, fades to show boat on right */}
