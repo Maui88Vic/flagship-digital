@@ -122,7 +122,7 @@ export function Nav() {
               {link.label}
             </a>
           ))}
-          <Button href="#pricing" size="sm">
+          <Button href="/#cta" size="sm">
             Get Started
           </Button>
         </div>
@@ -224,7 +224,7 @@ export function Nav() {
               {link.label}
             </a>
           ))}
-          <Button href="#pricing" size="lg" onClick={() => setMenuOpen(false)}>
+          <Button href="/#cta" size="lg" onClick={() => setMenuOpen(false)}>
             Get Started
           </Button>
         </div>
